@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script";
+import { CartProvider } from "../app/components/CartContext"; // Import CartProvider
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,10 +27,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <head>
+        <Script
+          src="https://kit.fontawesome.com/5eed2da627.js"
+          crossOrigin="anonymous"
+        ></Script>
+        <title>Branded Perfumes Online in Pakistan - Perfume Online</title>
+        <link
+          rel="shortcut icon"
+          href="//perfumeonline.pk/cdn/shop/files/Favicon_Perfumeonline_32x32.png?v=1704697970"
+          type="image/png"
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <CartProvider>
+          {children} {/* Wrap children inside CartProvider to provide cart context */}
+        </CartProvider>
       </body>
     </html>
   );
