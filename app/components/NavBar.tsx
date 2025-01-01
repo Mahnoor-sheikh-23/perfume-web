@@ -265,13 +265,13 @@ function Navbar() {
                       </div>
 
                     ))}
-                    <div className="mt-4  flex justify-between w-72 text-lg font-bold">
+                    <div className="mt-4  flex justify-between w-auto md:w-72 text-lg font-bold">
                       <p>Total: </p>
                       <p>${getTotalPrice()} </p>
                     </div>
                     <div className='mt-3'>
                       <Link href={"/checkout"}>
-                        <button className='w-[300px] h-[40px] font-bold hover:bg-customGold bg-black text-white rounded-2xl '>CHECK OUT</button>
+                        <button className='md:w-[300px] w-[200px]  h-[40px] font-bold hover:bg-customGold bg-black text-white rounded-2xl '>CHECK OUT</button>
                       </Link>
                     </div>
                   </div>

@@ -25,10 +25,10 @@ interface Product {
     imageUrl: string;
     peroff: number;
     category: string;
-    watching:number;
-    sold:number;
-    vendor:string;
-    SKU:number;
+    watching: number;
+    sold: number;
+    vendor: string;
+    SKU: number;
 }
 
 const ProductDetail = () => {
@@ -48,12 +48,11 @@ const ProductDetail = () => {
         };
         addToCart(productToAdd);
     };
-
     useEffect(() => {
         const fetchProduct = async () => {
             try {
                 const query = groq`
-                    *[_type == "post" && _id == $id][0] {
+                    *[_type == "post" && _id == $id][0]{
                         _id,
                         heading,
                         SKU,
@@ -86,9 +85,9 @@ const ProductDetail = () => {
 
     if (loading) {
         return <div className="flex justify-center items-center h-screen">
-        <div className="w-16 h-16 border-4 border-t-4 border-customGold rounded-full animate-spin"></div>
-      </div>
-      ;
+            <div className="w-16 h-16 border-4 border-t-4 border-customGold rounded-full animate-spin"></div>
+        </div>
+            ;
     }
 
     if (!product) {
@@ -114,7 +113,7 @@ const ProductDetail = () => {
                     </Breadcrumb>
                 </div>
 
-                <div className='flex flex-col md:flex-row ml-9 justify-center gap-9 mt-9'>
+                <div className='flex flex-col md:flex-row ml-3 md:ml-9 justify-center gap-9 mt-9'>
                     <div className='md:w-[650px] w-auto md:h-[700px] border border-black'>
                         <img src={product.imageUrl} id="zoom-image" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-150" />
                     </div>
@@ -138,7 +137,7 @@ const ProductDetail = () => {
                         </div>
 
                         {/* Product details */}
-                        <div className='w-[330px] space-y-6 mt-7'>
+                        <div className='md:w-[330px] w-auto space-y-6 mt-7'>
                             <div className='flex   justify-between'>
                                 <p className='text-gray-400 text-[18px]'>Vendor</p>
                                 <p className='text-[18px]'>{product.vendor}</p>
@@ -161,20 +160,36 @@ const ProductDetail = () => {
                             </button>
                         </div>
 
-                        {/* Buyer protection */}
-                        <div className='space-y-3 mt-7'>
-                            <h1 className='font-bold text-[20px]'>BUYER PROTECTION</h1>
-                            <div className='flex gap-2 items-center'>
-                                <i className="fa-regular fa-square-check"></i>
-                                <span className='font-bold text-[19px]'>Full Refund</span><p className='text-[17px]'> if you don&apos;t receive your order.</p>
+                        <div className="space-y-3 mt-7 px-4 sm:px-6 lg:px-8">
+                            <h1 className="font-bold text-[20px] text-center sm:text-left sm:text-[22px] lg:text-[24px]">
+                                BUYER PROTECTION
+                            </h1>
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                                <i className="fa-regular fa-square-check text-xl sm:text-2xl"></i>
+                                <div className="flex flex-col sm:flex-row sm:gap-2">
+                                    <span className="font-bold text-[17px] sm:text-[19px]">
+                                        Full Refund
+                                    </span>
+                                    <p className="text-[15px] sm:text-[17px]">
+                                        if you don&apos;t receive your order.
+                                    </p>
+                                </div>
                             </div>
-                            <div className='flex gap-2 items-center whitespace-nowrap'>
-                                <i className="fa-regular fa-square-check"></i>
-                                <span className='font-bold text-[19px]'>DELIVERY TIME</span><p className='text-[17px]'> , 3 to 5 working days ( Exclude Main Cities )</p>
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 whitespace-normal sm:whitespace-nowrap">
+                                <i className="fa-regular fa-square-check text-xl sm:text-2xl"></i>
+                                <div className="flex flex-col sm:flex-row sm:gap-2">
+                                    <span className="font-bold text-[17px] sm:text-[19px]">
+                                        DELIVERY TIME
+                                    </span>
+                                    <p className="text-[15px] sm:text-[17px]">
+                                        , 3 to 5 working days ( Exclude Main Cities )
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                </div>  
+                </div>
             </div>
             <Footer />
         </div>

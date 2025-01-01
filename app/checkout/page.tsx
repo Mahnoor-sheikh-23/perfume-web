@@ -9,14 +9,14 @@ const CheckoutPage = () => {
         <div>
             <div className='bg-black border-b border-gray-400'>
                 <Image
-                width={400}
-                height={400}
+                    width={400}
+                    height={400}
                     src="https://perfumeonline.pk/cdn/shop/files/Perfumeonline_Logo_avi_500x.webp?v=1717415420"
                     alt="Logo"
                     className="p-2 md:p-9 " />
             </div>
             <div className="h-full bg-black text-white flex flex-col md:flex-row justify-between items-start p-4">
-                <div className="w-full max-w-lg p-6 rounded-md ml-10 shadow-lg">
+                <div className="w-full max-w-lg p-6 rounded-md md:ml-10 ml-1 shadow-lg">
                     <form>
                         {/* Email */}
                         <div className="mb-4">
@@ -31,7 +31,6 @@ const CheckoutPage = () => {
                                 required
                             />
                         </div>
-
                         {/* Country */}
                         <div className="mb-4 mt-12">
                             <label htmlFor="country" className="block text-3xl font-medium mb-2">
