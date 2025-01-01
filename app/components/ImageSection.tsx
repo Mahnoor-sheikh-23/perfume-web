@@ -8,10 +8,10 @@ function ImageSection() {
     <div id='something'>
       <div>
         <Link href={"/collection/all"}>
-          <Image alt=" " src='https://perfumeonline.pk/cdn/shop/files/Banner_1920x.webp?v=1704452333' width={1000} height={1000} className='w-screen h-screen object-fill object-center overflow-hidden aspect-auto z-0  ' />
+          <Image alt=" " src='https://perfumeonline.pk/cdn/shop/files/Banner_1920x.webp?v=1704452333' width={1000} height={1000} className='w-screen md:h-screen bject-fill object-center overflow-hidden aspect-auto z-0  ' />
         </Link>
       </div>
-      <div className='mt-10 mb-10 text-4xl flex justify-center'>
+      <div className='mt-10 mb-10 text-2xl md:text-4xl flex justify-center'>
         <span className='font-bold underline'>
           FEATURED COLLECTIONS
         </span>
@@ -80,7 +80,7 @@ function ImageSection() {
         <Link href={"/collection/chanel"}>
 
           <Image width={900}
-            height={900} alt="chanel" src='https://perfumeonline.pk/cdn/shop/files/Chanel_1920x.webp?v=1709038549' className='w-screen h-[100vh] object-fill' />
+            height={900} alt="chanel" src='https://perfumeonline.pk/cdn/shop/files/Chanel_1920x.webp?v=1709038549' className='w-screen h-auto md:h-[100vh] object-fill' />
         </Link>
       </div>
 
@@ -112,12 +112,12 @@ function ImageSection() {
       <div className='flex  justify-between flex-col md:flex-row space-y-6 md:space-y-0  space-x-8 ml-9 mr-9 mb-9 '>
         <div>
           <Link href={"/collection/versace"}>
-            <Image className='w-screen h-[100vh] object-fill'  alt="" width={700} height={700} src="https://perfumeonline.pk/cdn/shop/files/Versace_d745d576-1ec9-4917-b297-c8316ff29379_800x.webp?v=1709038847" />
+            <Image className='w-screen h-auto md:h-[100vh] object-fill'  alt="" width={700} height={700} src="https://perfumeonline.pk/cdn/shop/files/Versace_d745d576-1ec9-4917-b297-c8316ff29379_800x.webp?v=1709038847" />
           </Link>
         </div>
         <div>
           <Link href={"/collection/christian"}>
-          <Image  className='w-screen h-[100vh] object-fill' alt="" width={700} height={700} src="https://perfumeonline.pk/cdn/shop/files/Christian_Dior_95b272eb-fbce-4c45-b806-be32df01ab79_800x.webp?v=1709038905" />
+          <Image  className='w-screen h-auto: md:h-[100vh] object-fill' alt="" width={700} height={700} src="https://perfumeonline.pk/cdn/shop/files/Christian_Dior_95b272eb-fbce-4c45-b806-be32df01ab79_800x.webp?v=1709038905" />
           </Link>
         </div>
       </div>

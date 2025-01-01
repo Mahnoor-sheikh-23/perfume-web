@@ -83,7 +83,7 @@ const ImagesShown = () => {
             alt=""
             width={1000}
             height={1000}
-            className="w-screen h-screen object-fill object-center overflow-hidden aspect-auto z-0"
+            className="w-screen h-auto md:h-screen object-fill object-center overflow-hidden aspect-auto z-0"
             src={
               "https://perfumeonline.pk/cdn/shop/files/Tom_Ford_3dd2e5b0-2e88-4eef-aaa7-36ab89bb974d_1920x.webp?v=1709038958"
             }

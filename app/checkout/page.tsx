@@ -175,7 +175,6 @@ const CheckoutPage = () => {
                         </button>
                     </form>
                 </div>
-
                 {/* Right side - Cart Items Section */}
                 <div className="flex flex-col w-full max-w-sm sm:max-w-md lg:max-w-lg border-l border-gray-300 pl-4 mt-4 sm:mt-0">
                     <h2 className="text-2xl font-semibold mb-4">Your Cart</h2>
