@@ -49,7 +49,7 @@ const CheckoutPage = () => {
                             </select>
                         </div>
 
-                        <div className='flex gap-4'>
+                        <div className='flex gap-4 flex-col md:flex-row'>
                             {/* First Name */}
                             <div className="mb-4">
                                 <input
@@ -85,7 +85,7 @@ const CheckoutPage = () => {
                         </div>
 
                         {/* City */}
-                        <div className='flex gap-4'>
+                        <div className='flex flex-col md:flex-row gap-4'>
                             {/* City */}
                             <div className="mb-4">
                                 <input

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -38,17 +39,35 @@ const Footer = () => {
                     <h1 className='text-[20px] md:text-[24px] text-customGold mb-4 md:mb-8'>POPULAR CATEGORIES</h1>
                     <ul className='space-y-2 md:space-y-4 text-base md:text-xl'>
                         <li className='hover:text-customGold cursor-pointer'>Brands</li>
-                        <li className='hover:text-customGold cursor-pointer'>Men Perfumes</li>
-                        <li className='hover:text-customGold cursor-pointer'>Women Perfumes</li>
-                        <li className='hover:text-customGold cursor-pointer'>Unisex Perfumes</li>
-                        <li className='hover:text-customGold cursor-pointer'>Gift Sets</li>
+                        <li className='hover:text-customGold cursor-pointer'>
+                            <Link href={"/collection/men"}>
+                                Men Perfumes</Link>
+                        </li>
+                        <li className='hover:text-customGold cursor-pointer'>
+                            <Link href={"/collection/women"}>
+                                Women Perfumes
+                            </Link></li>
+                        <li className='hover:text-customGold cursor-pointer'>
+                            <Link href={"/collection/unisex"}>
+                                Unisex Perfumes
+                            </Link></li>
+                        <li className='hover:text-customGold cursor-pointer'>
+                            <Link href={"/collection/giftset"}>
+                                Gift Sets
+                            </Link> </li>
                     </ul>
                 </div>
                 <div className='flex flex-col w-full md:w-auto'>
                     <h1 className='text-[20px] md:text-[24px] text-customGold mb-4 md:mb-8'>INFORMATION</h1>
                     <ul className='space-y-2 md:space-y-4 text-base md:text-xl'>
-                        <li className='hover:text-customGold cursor-pointer'>Return & Refund Policy</li>
-                        <li className='hover:text-customGold cursor-pointer'>Contact Us</li>
+                        <li className='hover:text-customGold cursor-pointer'>
+                            <Link href={"/returnPage"}>
+                            Return & Refund Policy
+                            </Link></li>
+                        <li className='hover:text-customGold cursor-pointer'>
+                            <Link href={"/contact"}>
+                                Contact Us
+                            </Link></li>
                     </ul>
                 </div>
             </div>

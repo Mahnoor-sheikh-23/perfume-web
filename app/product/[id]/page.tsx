@@ -126,7 +126,7 @@ const ProductDetail = () => {
                                 <div className="h-[30px] w-[30px] rounded-full bg-[#daa877] animate-glowGold" />
                                 <p className='text-[21px]'>{product.watching} watching</p>
                             </div>
-                            <p className='text-[21px]'>
+                            <p className='text-[21px] pr-2 md:pr-0'>
                                 {product.sold} sold in the last hour
                             </p>
                         </div>
@@ -137,7 +137,7 @@ const ProductDetail = () => {
                         </div>
 
                         {/* Product details */}
-                        <div className='md:w-[330px] w-auto space-y-6 mt-7'>
+                        <div className='md:w-[330px] m-3 md:m-0 w-auto space-y-6 mt-7'>
                             <div className='flex   justify-between'>
                                 <p className='text-gray-400 text-[18px]'>Vendor</p>
                                 <p className='text-[18px]'>{product.vendor}</p>
