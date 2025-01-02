@@ -37,7 +37,7 @@ const page = () => {
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
                             <p className="text-gray-600 mb-4">
-                                We'd love to hear from you! Feel free to reach out to us using the contact details below:
+                                We&apos;d love to hear from you! Feel free to reach out to us using the contact details below:
                             </p>
                             <ul className="space-y-4 text-gray-700">
                                 <li>

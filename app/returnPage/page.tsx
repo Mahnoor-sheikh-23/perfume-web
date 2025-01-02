@@ -53,7 +53,7 @@ const ReturnRefundPolicy = () => {
 
                     <h2 className="text-3xl font-semibold text-gray-800 mt-6 mb-3">Community Engagement</h2>
                     <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                        <li>Perfume Online is not just a platform; it's a community of like-minded individuals who value quality, security, and satisfaction.</li>
+                        <li>Perfume Online is not just a platform; it&apos;s a community of like-minded individuals who value quality, security, and satisfaction.</li>
                         <li>Engage with us on social media in discussions, and be a part of a community that prioritizes the well-being and happiness of its members.</li>
                     </ul>
 
@@ -64,7 +64,7 @@ const ReturnRefundPolicy = () => {
                     </ul>
 
                     <p className="text-gray-700 mt-6">
-                        At Perfume Online, we protect your satisfaction. It's a philosophy that drives every decision. We are committed to offering you a secure, transparent, and satisfying shopping experience. Our journey doesn't end with a successful transaction; it begins with it. Your trust inspires us to evolve and enhance our services. We ensure that every interaction with Perfume Online exceeds your expectations. Our dedicated customer service team is here to help if you have any questions or suggestions.
+                        At Perfume Online, we protect your satisfaction. It&apos;s a philosophy that drives every decision. We are committed to offering you a secure, transparent, and satisfying shopping experience. Our journey doesn&apos;t end with a successful transaction; it begins with it. Your trust inspires us to evolve and enhance our services. We ensure that every interaction with Perfume Online exceeds your expectations. Our dedicated customer service team is here to help if you have any questions or suggestions.
                     </p>
 
                     <p className="text-gray-700 mt-6">
