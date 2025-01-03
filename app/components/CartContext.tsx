@@ -1,7 +1,6 @@
 // context/CartContext.tsx
 "use client";
 import { createContext, useState, useEffect ,  useContext, ReactNode } from "react";
-
 interface CartItem {
   id: string;
   name: string;
@@ -38,22 +37,20 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     // Retrieve cart items from localStorage when the component mounts
-    const storedCartItems = localStorage.getItem('cartItems');
+    const storedCartItems = localStorage.getItem('cartItemss');
     if (storedCartItems) {
       setCartItems(JSON.parse(storedCartItems));
     }
   }, []);
-
   useEffect(() => {
     // Save cart items to localStorage whenever they change
     if (cartItems.length > 0) {
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      localStorage.setItem('cartItemss', JSON.stringify(cartItems));
     }
-  }, [cartItems]);
-
-  
+  }, [cartItems]);  
   const removeFromCart = (id: string) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    localStorage.removeItem("cartItemss")
   };
 
   const getTotalPrice = () => {
@@ -68,7 +65,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     </CartContext.Provider>
   );
 };
-
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {

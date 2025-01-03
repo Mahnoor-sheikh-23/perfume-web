@@ -65,7 +65,6 @@ const CategoryPage = () => {
        heading,
        peroff
      }`;
-
                 const fetchedProducts = await client.fetch(query, { category, brand });
                 setProducts(fetchedProducts);
             } catch (error) {
@@ -95,7 +94,6 @@ const CategoryPage = () => {
             <div className="w-16 h-16 border-4 border-t-4 border-customGold rounded-full animate-spin"></div>
         </div>
     }
-
     return (
         <div>
             <Navbar />
@@ -111,10 +109,9 @@ const CategoryPage = () => {
                         </BreadcrumbItem>
                     </BreadcrumbList>
                 </Breadcrumb>
-
             </div>
-            <div className='flex flex-col md:flex-row  justify-evenly mt-16 text-gray-700'>
-                <div className="md:w-[400px] w-auto h-[1650px] m-2 md:m-0">
+            <div className='flex flex-col md:flex-row   m-2 md:m-0 lg:gap-6 justify-evenly md:mt-16 text-gray-700'>
+                <div className="md:w-[400px] order-2 md:order-1 w-auto h-[1650px] m-2 md:m-0">
                     <div className="w-full md:w-[400px] h-[1650px] border border-black">
                         <div>
                             <p className="text-[20px] p-3 border-b border-black">SHOP BY</p>
@@ -290,7 +287,7 @@ const CategoryPage = () => {
                     </div>
                 </div>
 
-                <div className='md:w-[1100px] w-auto'>
+                <div className='md:w-[1100px] w-auto order-1 md:order-2'>
                     <div>
                         <div className='flex items-center border text-black mt-[49px] border-gray-200 justify-between'>
                             <p className='text-[20px] p-3'>

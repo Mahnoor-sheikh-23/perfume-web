@@ -7,6 +7,7 @@ import Navbar from '@/app/components/NavBar';
 import Counter from '@/app/components/Counter';
 import { useCart } from "../../components/CartContext";
 import Footer from '@/app/components/Footer';
+import Link from 'next/link';
 
 import {
     Breadcrumb,
@@ -82,7 +83,6 @@ const ProductDetail = () => {
 
         fetchProduct();
     }, [id]);
-
     if (loading) {
         return <div className="flex justify-center items-center h-screen">
             <div className="w-16 h-16 border-4 border-t-4 border-customGold rounded-full animate-spin"></div>
@@ -154,7 +154,9 @@ const ProductDetail = () => {
 
                         {/* Action buttons */}
                         <div className='flex gap-4 mt-7'>
-                            <button className='w-[130px] text-white bg-black font-bold h-[67px] hover:text-black hover:bg-customGold'>BUY NOW</button>
+                            <Link href={"/checkout"}>
+                                <button className='w-[130px] text-white bg-black font-bold h-[67px] hover:text-black hover:bg-customGold'>BUY NOW</button>
+                            </Link>
                             <button onClick={handleAddToCart} className='h-[67px] w-[170px] border border-customGold hover:bg-customGold font-bold text-[17px] items-center text-customGold hover:text-white'>
                                 <i className="fa-solid fa-basket-shopping text-3xl text-customGold hover:text-white"></i> ADD TO CART
                             </button>

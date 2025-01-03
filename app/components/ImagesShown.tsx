@@ -93,6 +93,9 @@ const ImagesShown = () => {
 
       {/* Carousel */}
       <div className="mt-20">
+      <div className="mt-10 mb-10 text-2xl md:text-4xl flex justify-center">
+        <span className="font-bold underline">WOMEN PERFUME</span>
+      </div>
         <Carousel>
           <CarouselContent>
             {productChunks.map((chunk, chunkIndex) => (
